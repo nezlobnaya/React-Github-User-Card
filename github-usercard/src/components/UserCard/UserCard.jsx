@@ -26,7 +26,7 @@ const Thumbnail = styled.img`
                 <Thumbnail src={props.avatar_url} alt='UserImage' />
                 <h2>{props.name}</h2>
                 <h2>{props.login}</h2>
-                <a href={props.html_url}>Click for details</a>
+                <a href={props.html_url} onClick={(e) => { e.preventDefault();window.open(props.html_url)}}>Click for details</a>
             </div>
         </Card>
     )
