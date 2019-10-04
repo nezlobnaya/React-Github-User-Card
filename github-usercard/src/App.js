@@ -1,8 +1,21 @@
 import React from 'react';
-import './App.css';
 import UserCard from './components/UserCard/UserCard';
 import Followers from './components/Followers/Followers';
+import styled from 'styled-components';
 
+
+const UserList = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: space-between;
+  justify-content: center;
+  transition: 0.5s;
+  transform: translateY(-4px) scale(1.03);
+`
 
 class App extends React.Component {
   constructor() {
@@ -43,9 +56,11 @@ class App extends React.Component {
 
     return (
       <>    
+        <UserList>
           <h1>GitHub UserCards</h1>
           <UserCard key={this.state.userData.login} {...this.state.userData} />
           <Followers followers={this.state.followers} />
+        </UserList>
        </>
     )
   }
