@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.App {
+  display: flex;
+  flex-flow: wrap;
+ justify-content: center;
+ align-items: center;
+}
 .List {
   transition: all 0.5s;
   z-index: 1;
@@ -21,6 +27,20 @@ code {
   transform: translateY(-4px) scale(1.03);
 }
 
-a:link {
+a {
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: black;
+}
+
+a:visited {
+  color: purple;
+}
+
+

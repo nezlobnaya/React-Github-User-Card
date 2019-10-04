@@ -2,6 +2,7 @@ import React from 'react';
 import UserCard from './components/UserCard/UserCard';
 import Followers from './components/Followers/Followers';
 import styled from 'styled-components';
+import './index.css'
 
 
 const UserList = styled.div`
@@ -13,8 +14,7 @@ const UserList = styled.div`
   align-content: space-between;
   align-items: space-between;
   justify-content: center;
-  transition: 0.5s;
-  transform: translateY(-4px) scale(1.03);
+ 
 `
 
 class App extends React.Component {
@@ -57,10 +57,13 @@ class App extends React.Component {
     return (
       <>    
         <UserList>
+          <div className='App'>
           <h1>GitHub UserCards</h1>
           <UserCard key={this.state.userData.login} {...this.state.userData} />
           <Followers followers={this.state.followers} />
+          </div>
         </UserList>
+        
        </>
     )
   }

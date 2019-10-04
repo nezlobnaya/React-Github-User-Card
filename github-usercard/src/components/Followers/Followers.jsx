@@ -4,7 +4,8 @@ import UserCard from '../UserCard/UserCard';
 const Followers = (props) => {
     console.log('Followers Props', props)
     return(<>
-        {props.followers.map(i => <UserCard key={i.login} {...i} />)}
+        {props.followers.map(i => 
+        <UserCard key={i.login} {...i} />)}
          </>
         )
 }
